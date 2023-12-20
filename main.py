@@ -10,8 +10,13 @@ SNAKE_COLOR = "#00FF00"
 FOOD_COLOR = "#FF0000"
 BACKGROUND_COLOR = "#000000"
 
-welcome_screen_text = "Snake Game!\nMade By RejectModders"
-
+welcome_screen_text = "Snake Game!\nMade By: RejectModders\nMade it for fun\n\n" \
+                      "Instructions:\n" \
+                      "Use arrow keys to control the snake.\n" \
+                      "Eat the red food to grow and earn points.\n" \
+                      "Avoid running into the edges of the game window\n" \
+                      "and colliding with yourself.\n\n" \
+                      "Reminder... this does NOT support WASD. Only arrow keys."
 class Snake:
     def __init__(self):
         self.body_size = BODY_PARTS
@@ -69,7 +74,7 @@ def next_turn(snake, food):
 
 def change_direction(event):
     global direction
-    if event.keysym in ['Left', 'Right', 'Up', 'Down']:
+    if event.keysym.lower() in ['left', 'right', 'up', 'down']:
         new_direction = event.keysym.lower()
         if (new_direction == 'left' and direction != 'right') or \
            (new_direction == 'right' and direction != 'left') or \
@@ -95,8 +100,8 @@ def game_over():
     canvas.create_text(canvas.winfo_width() / 2, canvas.winfo_height() / 2,
                        font=('consolas', 70), text="GAME OVER", fill="red", tag="gameover")
     canvas.create_text(canvas.winfo_width() / 2, canvas.winfo_height() / 1.5,
-                       font=('consolas', 10), text="Press any key to restart", fill="white", tag="restart")
-    window.bind('<Key>', restart_game)
+                       font=('consolas', 13), text="Press the 'SPACE' key to restart", fill="white", tag="restart")
+    window.bind('<space>', restart_game)
 
 def restart_game(event):
     global snake, food, score, direction
@@ -114,9 +119,9 @@ def restart_game(event):
 def welcome_screen():
     canvas.delete(ALL)
     canvas.create_text(canvas.winfo_width() / 2, canvas.winfo_height() / 2,
-                       font=('consolas', 20), text=welcome_screen_text, fill="white", tag="welcome")
-    canvas.create_text(canvas.winfo_width() / 2, canvas.winfo_height() / 1.5,
-                       font=('consolas', 10), text="Press any key to start", fill="white", tag="welcome")
+                       font=('consolas', 16), text=welcome_screen_text, fill="white", tag="welcome")
+    canvas.create_text(canvas.winfo_width() / 2, canvas.winfo_height() / 1.4,
+                       font=('consolas', 13), text="Press any key to start", fill="white", tag="welcome")
 
 def start_game(event):
     global snake, food
