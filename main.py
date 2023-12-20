@@ -10,7 +10,7 @@ SNAKE_COLOR = "#00FF00"
 FOOD_COLOR = "#FF0000"
 BACKGROUND_COLOR = "#000000"
 
-welcome_screen_text = "Snake Game!\nMade By: RejectModders\nMade it for fun\n\n" \
+welcome_screen_text = "Snake Game!\nMade By: RejectModders\nMade it for fun.\n\n" \
                       "Instructions:\n" \
                       "Use arrow keys to control the snake.\n" \
                       "Eat the red food to grow and earn points.\n" \
