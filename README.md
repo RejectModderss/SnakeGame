@@ -1,11 +1,11 @@
 # SnakeGame
 Snake Game in python
 
-For both EXE n IDE version, make sure to download the mp3 files, they will NOT work unless you use them.
+For both EXE n IDE version, make sure to download the mp3 files, they will NOT work unless you use them. 
 
 If you wanna add more or edit the source, then go ahead, made it for fun to be honest.
 
-I also added the exe version just incase you wanna play on the exe version instead of using an IDE.
+I also added the exe version just incase you wanna play on the exe version instead of using an IDE. If you do use the exe version make sure to put all mp3 files inside of a folder with the exe file.
 
 # Credits
 I got most of the source from https://www.youtube.com/watch?v=bfRwxS5d0SI
